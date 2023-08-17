@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
-
 body,
 html {
   height: 100%;
 }
 
 body {
-  font-family: "Vina Sans", sans-serif;
+  font-family: sans-serif;
   color: #ddfff7;
   font-size: 3rem;
   background: rgb(255, 210, 252);
@@ -35,6 +33,11 @@ a.navbar {
   color: #8a8eff;
 }
 
+a.navbar:hover,
+a.navbar:active {
+  color: #78efa8;
+}
+
 .navbar-links {
   margin: 64px;
   padding: 32px 40px;
@@ -42,4 +45,7 @@ a.navbar {
   color: #8a8eff;
   border-radius: 4px;
   font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
