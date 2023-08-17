@@ -3,15 +3,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Cabin } from "next/font/google";
 
-import { Vina_Sans } from "next/font/google";
-
-const vinaSans = Vina_Sans({
+const cabin = Cabin({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-vina-sans",
-  weight: ["400"],
+  display: "block",
+  variable: "--font-cabin",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -24,13 +23,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(vinaSans);
   return (
     <html lang="en">
-      <body>
-        <div className={vinaSans.className}>
-          <Navbar />
-        </div>
+      <body className={cabin.className}>
+        <Navbar />
 
         {children}
       </body>
